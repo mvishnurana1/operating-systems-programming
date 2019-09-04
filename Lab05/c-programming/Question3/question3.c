@@ -21,7 +21,9 @@ void getStudent(struct Student *s) {
     printf("Type the student enrollment option (D or X): \n");
     s->enroll = malloc(100); 
     fgets(s->enroll, 100, stdin); 
-    
+
+    free(s->name);
+    free(s->enroll);  
 }
 
 int main() {
