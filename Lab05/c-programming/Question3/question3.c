@@ -4,26 +4,27 @@
 struct Student {
     char *name; 
     int id; 
-    char *enroll; 
+    char enroll; 
 }; 
 
 struct Student john; 
 
-void getStudent(struct Student *s) {
+void freeStudent(struct Student *s) {
+    free(s->name); 
+}
 
+void getStudent(struct Student *s) {
     printf("Type the name of the student: \n");
     s->name = malloc(100);   // assume name has less than 100 letters 
     fgets(s->name, 100, stdin);
 
     printf("Type the student number: \n");
-    scanf("%d", &(s->id));
+    scanf("%d%*c", &(s->id));
 
     printf("Type the student enrollment option (D or X): \n");
-    s->enroll = malloc(100); 
-    fgets(s->enroll, 100, stdin); 
-
-    free(s->name);
-    free(s->enroll);  
+    scanf("%c", &(s->enroll)); 
+    
+    freeStudent(s); 
 }
 
 int main() {
