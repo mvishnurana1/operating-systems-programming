@@ -4,7 +4,7 @@
 struct Student {
     char *name; 
     int id; 
-    char enroll; 
+    char *enroll; 
 }; 
 
 struct Student john; 
@@ -19,11 +19,9 @@ void getStudent(struct Student *s) {
     scanf("%d", &(s->id));
 
     printf("Type the student enrollment option (D or X): \n");
-    scanf("%c", &(s->enroll)); // watch out for a bug here!
-
-    free(s->name); 
-    //free(s->enroll); 
-    return; 
+    s->enroll = malloc(100); 
+    fgets(s->enroll, 100, stdin); 
+    
 }
 
 int main() {
