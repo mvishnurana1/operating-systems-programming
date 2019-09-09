@@ -1,0 +1,21 @@
+root@vishnu-rana:/mnt/c/ICT374-OSSP/Lab Pracs/operating-systems-programming/Lab04/unix-programming/chmod-exercise# ls -l
+total 0
+-rwxrwxrwx 1 root root 387 Sep  8 12:59 chmod.txt
+-rwxrwxrwx 1 root root 157 Sep  8 11:08 foo-new
+root@vishnu-rana:/mnt/c/ICT374-OSSP/Lab Pracs/operating-systems-programming/Lab04/unix-programming/chmod-exercise# chmod -f 111 foo-new
+root@vishnu-rana:/mnt/c/ICT374-OSSP/Lab Pracs/operating-systems-programming/Lab04/unix-programming/chmod-exercise# ls -l
+total 0
+-rwxrwxrwx 1 root root 387 Sep  8 12:59 chmod.txt
+-r-xr-xr-x 1 root root 157 Sep  8 11:08 foo-new
+root@vishnu-rana:/mnt/c/ICT374-OSSP/Lab Pracs/operating-systems-programming/Lab04/unix-programming/chmod-exercise# pico chmod.txt
+root@vishnu-rana:/mnt/c/ICT374-OSSP/Lab Pracs/operating-systems-programming/Lab04/unix-programming/chmod-exercise# chmod -f 444 foo-new
+root@vishnu-rana:/mnt/c/ICT374-OSSP/Lab Pracs/operating-systems-programming/Lab04/unix-programming/chmod-exercise# ls -l
+total 0
+-rwxrwxrwx 1 root root 387 Sep  8 12:59 chmod.txt
+-r-xr-xr-x 1 root root 157 Sep  8 11:08 foo-new
+root@vishnu-rana:/mnt/c/ICT374-OSSP/Lab Pracs/operating-systems-programming/Lab04/unix-programming/chmod-exercise# chmod -f 777 foo-new
+root@vishnu-rana:/mnt/c/ICT374-OSSP/Lab Pracs/operating-systems-programming/Lab04/unix-programming/chmod-exercise# ls -l
+total 0
+-rwxrwxrwx 1 root root 387 Sep  8 12:59 chmod.txt
+-rwxrwxrwx 1 root root 157 Sep  8 11:08 foo-new
+root@vishnu-rana:/mnt/c/ICT374-OSSP/Lab Pracs/operating-systems-programming/Lab04/unix-programming/chmod-exercise#
