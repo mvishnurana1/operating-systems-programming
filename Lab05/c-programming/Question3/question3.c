@@ -22,7 +22,7 @@ void getStudent(struct Student *s) {
     scanf("%d%*c", &(s->id));
 
     printf("Type the student enrollment option (D or X): \n");
-    scanf("%c", &(s->enroll)); 
+    scanf("%c%*c", &(s->enroll)); 
 }
 
 void printStudent(struct Student *stu){
