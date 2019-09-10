@@ -11,10 +11,10 @@ int main(){
 
     if(pid > 0){
         wait((int*)0);
-        printf("The parent has completed\n");
-        //exit(0); 
+        printf("The parent terminated\n");
+        exit(0); 
     }
-
+    else 
     if(pid == 0) {
         printf("The child has terminated!\n"); 
         //exit(0);   

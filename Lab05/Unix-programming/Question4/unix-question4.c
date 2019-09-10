@@ -10,12 +10,10 @@ int main(){
     pid = fork(); 
 
     if(pid == 0){
-        printf("I'll be waiting for 2 seconds...\n");
-        sleep(2); 
-        printf("I am executed...\n"); 
-    //  exit(0); 
+        printf("child  pid=%d ppid=%d \n", pid, getppid());
+        sleep(20); 
     } else {
-        printf("I am the parent\n"); 
+        printf("parent pid=%d ppid=%d \n", pid, getppid()); 
     }
 
     return 0; 

@@ -9,9 +9,6 @@ int main(){
    if(pid == 0){
         printf("child process pid = %d\n", pid);
    }  
-   else {
-        printf("parent process pid = %d\n", pid); 
-   }
 
    return 0;  
 }
