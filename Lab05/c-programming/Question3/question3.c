@@ -16,7 +16,8 @@ void freeStudent(struct Student *s) {
 void getStudent(struct Student *s) {
     printf("Type the name of the student: \n");
     s->name = malloc(100);   // assume name has less than 100 letters 
-    fgets(s->name, 100, stdin);
+    //fgets(s->name, 100, stdin);
+    scanf("%s%*c", s->name); 
 
     printf("Type the student number: \n");
     scanf("%d%*c", &(s->id));
@@ -26,7 +27,7 @@ void getStudent(struct Student *s) {
 }
 
 void printStudent(struct Student *stu){
-    printf("   Student name              : %s", (stu->name));
+    printf("   Student name              : %s\n", (stu->name));
     printf("   Student ID                : %d\n", stu->id);
     printf("   Student enrollment status : %c\n", stu->enroll);
 
