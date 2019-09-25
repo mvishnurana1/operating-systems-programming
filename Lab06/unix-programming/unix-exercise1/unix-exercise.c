@@ -9,11 +9,9 @@ int main(){
     
     fork(); 
     fork(); 
-    printf("my pid = %d and my ppid = %d\n", pid, getppid());
-    sleep(100);  
+    printf("process pid = %d & ppid = %d\n", pid, getppid()); 
+    sleep(30); 
+//    sleep(100);  
 
-//    char *p = getenv("USER");
-//    if(p==NULL) return EXIT_FAILURE; 
-//    printf("usr name = %s\n", p);  
     return 0; 
 }
