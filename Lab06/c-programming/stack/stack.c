@@ -1,9 +1,3 @@
-/* file:     stack.c
- * aim:      implement a stack
- * author:   HX
- * date:     2006.09.06
- */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "stack.h"
